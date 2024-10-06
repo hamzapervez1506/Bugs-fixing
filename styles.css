@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.header {
+    background-color: #d73f42;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between; /* Center main content */
+    align-items: center;     /* Vertically center main content */
+    padding: 70px;
+    flex-wrap: wrap;
+}
+
+.left {
+    width: 60%;
+    max-width: 700px;        /* Max width to control large screens */
+    text-align: center;      /* Center the content inside .left */
+}
+
+.left h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.checklist {
+    list-style: none;
+    margin: 15px auto;       /* Auto margin to center the checklist */
+    padding: 0;
+    text-align: left;        /* Align items to the left inside the checklist */
+}
+
+.checklist li {
+    font-size: 18px;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 40px;      /* Space for the custom image */
+    text-align: left;        /* Align text to the left */
+}
+
+.checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/tick.png'); /* Replace with your custom image */
+    background-size: cover;
+}
+
+.warning {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;      /* Center the warning text */
+}
+
+.zip-btn {
+    background-color: #3367d6;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 auto 20px;     /* Auto margin to center the button */
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.reviews {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;      /* Center the reviews section */
+}
+
+.reviews img {
+    width: 100px;
+    vertical-align: middle;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;  /* Center the logos */
+}
+
+.logos img {
+    width: 80px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.right {
+    width: 34.5%;       /* Max width to avoid very large right section */
+    text-align: center;
+}
+
+.right img {
+    width: 100%;
+}
+
+.bbb-logo {
+    width: 50%;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #ececec;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #0073e6;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer img {
+    width: 100px;
+    margin: 10px 5px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 100%;
+        max-width: 100%;       /* Make both sections take full width on mobile */
+    }
+
+    .zip-btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logos img {
+        width: 60px;
+    }
+
+    .reviews img {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .right img {  /* Hide the image on very small screens */
+        display: none;
+    }
+
+    .left h2 {
+        font-size: 20px;
+    }
+
+    .checklist li {
+        font-size: 16px;
+    }
+
+    .zip-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
